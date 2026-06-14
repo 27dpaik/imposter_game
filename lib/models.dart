@@ -1,8 +1,5 @@
-// models.dart
 // Shared data classes used across the app.
-// OWNER: You (the repo owner). These define the "contract" everyone builds against.
 
-/// What the setup screen produces when you press Start.
 class GameConfig {
   final int playerCount;
   final int imposterCount;
@@ -16,7 +13,7 @@ class GameConfig {
 }
 
 /// A single playable round: the secret word plus who the imposters are.
-/// `isImposter[i]` is true if player i (0-based) is an imposter.
+/// `isImposter[i]` is true if player i is an imposter.
 class GameRound {
   final String secretWord;
   final String category;
@@ -30,7 +27,6 @@ class GameRound {
 
   int get playerCount => isImposter.length;
 
-  /// Human-friendly list like [1, 4] of the imposter player numbers.
   List<int> get imposterNumbers {
     final result = <int>[];
     for (var i = 0; i < isImposter.length; i++) {

@@ -1,6 +1,5 @@
-// main.dart
-// App entry point + theme. Wires everything together.
-// OWNER: You (the repo owner).
+// App entry point + theme. 
+
 
 import 'package:flutter/material.dart';
 import 'home_screen.dart';
